@@ -25,7 +25,8 @@ namespace SportsStore.Tests
             ProductController controller = new ProductController(mock.Object);
             controller.PageSize = 3;
             // Act
-            ProductsListViewModel result = controller.List(2).ViewData.Model as ProductsListViewModel;
+            ProductsListViewModel result = controller.List(null, 2).ViewData.Model as ProductsListViewModel;
+            //controller.List(2).ViewData.Model as ProductsListViewModel;
             //IEnumerable<Product> result =               
             //    controller.List(2).ViewData.Model as IEnumerable<Product>;
             // Assert
